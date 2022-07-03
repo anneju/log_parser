@@ -19,14 +19,6 @@ RSpec.describe LogParser::Client do
           expect(LogParser::UniqCountFormatter).to receive(:new).and_call_original
           subject.process
         end
-
-        it 'returns visits summary' do
-          expect { subject.process }.to output(/#{Regexp.quote('visits')}/).to_stdout
-        end
-
-        it 'returns unique views summary' do
-          expect { subject.process }.to output(/#{Regexp.quote('uniq views')}/).to_stdout
-        end
       end
 
       context 'when file does not have logs' do
