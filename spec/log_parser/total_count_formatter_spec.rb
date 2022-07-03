@@ -8,17 +8,17 @@ RSpec.describe LogParser::TotalCountFormatter do
     context 'when data is valid format (hash)' do
       let(:data) do
         {
-          "url_1" => 1,
-          "url_2" => 2,
-          "url_3" => 3,
+          'url_1' => 1,
+          'url_2' => 2,
+          'url_3' => 3
         }
       end
 
       it 'sort data by count desc' do
         expected_results = {
-          "url_3" => 3,
-          "url_2" => 2,
-          "url_1" => 1
+          'url_3' => 3,
+          'url_2' => 2,
+          'url_1' => 1
         }
 
         subject.run
@@ -36,7 +36,7 @@ RSpec.describe LogParser::TotalCountFormatter do
       let(:data) { '"url_1" => 1,"url_2" => 2,"url_3" => 3' }
 
       it 'returns error message' do
-        expect{ subject.run }.to raise_error(TypeError, 'data format should be a hash')
+        expect { subject.run }.to raise_error(TypeError, 'data format should be a hash')
       end
     end
   end

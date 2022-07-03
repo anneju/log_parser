@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'set'
 require 'pry'
 require_relative './total_count_formatter'
