@@ -34,7 +34,7 @@ RSpec.describe LogParser::Client do
       let(:file_name) { nil }
 
       it 'returns error message' do
-        expect{ subject.process }.to raise_error(ArgumentError, 'File name missing')
+        expect { subject.process }.to raise_error(ArgumentError, 'File name missing')
       end
     end
   end

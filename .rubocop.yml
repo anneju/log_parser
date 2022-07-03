@@ -1,0 +1,14 @@
+Style/Documentation:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - Gemfile
+    - spec/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
