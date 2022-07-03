@@ -9,7 +9,7 @@ module LogParser
 
     def print_page_visits(data)
       data.each do |page_name, count|
-        p "#{page_name} uniq #{count} views"
+        p "#{page_name} #{count} uniq views"
       end
     end
   end

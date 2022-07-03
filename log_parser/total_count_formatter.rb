@@ -17,7 +17,7 @@ module LogParser
 
     def print_page_visits(data)
       data.each do |page_name, count|
-        p page_name + " #{count} views"
+        p "#{page_name} #{count} visits"
       end
     end
   end

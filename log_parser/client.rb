@@ -12,6 +12,8 @@ module LogParser
     end
 
     def process
+      validate_args
+
       logs = File.read(@file_name).split("\n")
       return 'No logs to investigate' if logs.empty?
 
@@ -23,6 +25,12 @@ module LogParser
 
       TotalCountFormatter.new(@logs_total).run
       UniqCountFormatter.new(@logs_uniq).run
+    end
+
+    private
+
+    def validate_args
+      raise ArgumentError, 'File name missing' if @file_name.nil?
     end
   end
 end
